@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Maslova</title>
+    <link rel="icon" href="images/96.ico" type="image/x-icon"> <!-- Замените на путь к вашему файлу иконки -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-image: url(images/i.jpg); /* Путь к вашему фоновому изображению */
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+            color: #fff; /* Цвет текста для лучшего контраста */
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh; /* Высота на весь экран */
+            text-align: center;
+        }
+        .container {
+            background: rgba(255, 255, 255, 0.3); /* Полупрозрачный белый фон */
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+        }
+        .logo {
+            margin-bottom: 30px; /* Отступ между логотипом и блоком ссылок */
+            background: rgba(255, 255, 255, 0.3); /* Полупрозрачный белый фон */
+            border-radius: 10px;
+            padding: 10px;
+            display: inline-block;
+        }
+        .logo img {
+            max-width: 100%;
+            height: auto;
+            width: 150px; /* Ширина логотипа, можно изменить по желанию */
+        }
+        .social-links {
+            display: flex;
+            flex-direction: column;
+            gap: 15px; /* Отступ между ссылками */
+        }
+        .social-links a {
+            text-decoration: none;
+            color: #fff;
+            background-color: #ff6666;
+            border-radius: 5px;
+            padding: 15px 20px;
+            font-size: 1.2em;
+            display: block;
+            width: 200px;
+            margin: 0 auto; /* Центрирование ссылок */
+            cursor: pointer; /* Курсор указывает на кликабельность */
+        }
+        .social-links a:hover {
+            background-color: #9b4141;
+        }
+        @media (max-width: 600px) {
+            .social-links a {
+                padding: 12px 15px;
+                font-size: 1em;
+                width: 160px; /* Ширина ссылок для мобильных устройств */
+            }
+            .logo img {
+                width: 120px; /* Уменьшенная ширина логотипа для мобильных устройств */
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="logo">
+            <img src="images/ad.jpg" alt="Логотип"> <!-- Путь к вашему локальному логотипу -->
+        </div>
+        <div class="social-links">
+            <a href="https://vk.com/id314667387" target="_blank">Личная страница</a>
+            <a href="https://vk.com/sweetlife_maslovak" target="_blank">Вконтакте</a>
+            <a href="https://wa.me/qr/KGAENCR452CXI1" target="_blank">Whatsapp</a>
+            <a href="#" id="phoneLink" onclick="copyToClipboard('+79158591235')">+79158591235</a> <!-- Сделано кликабельным для копирования -->
+        </div>
+    </div>
+    <script>
+        function copyToClipboard(text) {
+            const tempInput = document.createElement('input');
+            tempInput.value = text;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            document.execCommand('copy');
+            document.body.removeChild(tempInput);
+            alert('Телефонный номер скопирован в буфер обмена!');
+        }
+    </script>
+</body>
+</html>
